@@ -11,35 +11,40 @@ const Navbar = () => {
       ? "gradient-red text-white px-3 py-2 rounded"
       : "hover:bg-gray-200 px-3 py-2 rounded";
 
-  const navLink = (
-    <>
-      <li>
-        <NavLink to="/" className={getNavLinkClass}>
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/Search" className={getNavLinkClass}>
-          Find Donor
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/donation-request" className={getNavLinkClass}>
-          Donation Request
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/blog" className={getNavLinkClass}>
-          Blog
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/funding" className={getNavLinkClass}>
-          Fund
-        </NavLink>
-      </li>
-    </>
-  );
+ const navLink = (
+  <>
+    <li>
+      <NavLink to="/" className={getNavLinkClass}>
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="/Search" className={getNavLinkClass}>
+        Find Donor
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to="/donation-request" className={getNavLinkClass}>
+        Donation Request
+      </NavLink>
+    </li>
+    {user?.email && (
+      <>
+        <li>
+          <NavLink to="/blog" className={getNavLinkClass}>
+            Blog
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/funding" className={getNavLinkClass}>
+            Fund
+          </NavLink>
+        </li>
+      </>
+    )}
+  </>
+);
+
 
   return (
     <div className="bg-[#f5c0c06c] w-full">
