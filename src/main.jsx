@@ -27,7 +27,7 @@ createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
     <AuthProvider>
       <Elements stripe={stripePromise}>
-        <div className="max-w-screen-xl p-2 md:p-0 mx-auto">
+        <div >
           <RouterProvider router={router} />
           <Toaster></Toaster>
         </div>

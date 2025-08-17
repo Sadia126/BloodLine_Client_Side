@@ -5,26 +5,6 @@ import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
-  console.log("from navbar", user);
-
-  // const setDarkMode = () => {
-  //   document.querySelector("body").setAttribute("data-theme", "dark");
-  //   localStorage.setItem("selectedTheme", "dark");
-  // };
-  // const setLightMode = () => {
-  //   document.querySelector("body").setAttribute("data-theme", "light");
-  //   localStorage.setItem("selectedTheme", "light");
-  // };
-
-  // const selectedTheme = localStorage.getItem("selectedTheme");
-  // if (selectedTheme === "dark") {
-  //   setDarkMode();
-  // }
-
-  // const toggoleTheme = (e) => {
-  //   if (e.target.checked) setDarkMode();
-  //   else setLightMode();
-  // };
 
   const getNavLinkClass = ({ isActive }) =>
     isActive
@@ -62,8 +42,8 @@ const Navbar = () => {
   );
 
   return (
-    <div>
-      <div className="navbar bg-[#f5c0c06c]">
+    <div className="bg-[#f5c0c06c] w-full">
+      <div className="navbar max-w-screen-xl mx-auto px-2 md:px-6">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
