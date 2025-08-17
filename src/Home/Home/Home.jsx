@@ -6,6 +6,7 @@ import Features from '../Features/Features';
 import Review from '../Review/Review';
 import FAQ from '../FAQ/FAQ';
 import Newsletter from '../Newsletter/Newsletter';
+import HowItWorks from '../HowItWorks/HowItWorks';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <FeaturedSection></FeaturedSection>
              <Features></Features>
+             <HowItWorks></HowItWorks>
              <Review></Review>
              <FAQ></FAQ>
              <Newsletter></Newsletter>
